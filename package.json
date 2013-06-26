@@ -7,17 +7,17 @@
     "jukebox",
     "ffmpeg"
   ],
-  "author": "Tõnis Tiigi <tonistiigi@gmail.com>",
+  "author": "Tõnis Tiigi <slavekjurkowski@gmail.com>",
   "version": "0.2.1",
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/github.com/tonistiigi/audiosprite/raw/master/LICENSE"
+      "url": "https://github.com/github.com/thejurk/audiosprite/raw/master/LICENSE"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/tonistiigi/audiosprite.git"
+    "url": "git://github.com/thejurk/audiosprite.git"
   },
   "main": "./audiosprite.js",
   "bin": {

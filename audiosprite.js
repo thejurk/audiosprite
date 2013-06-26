@@ -47,6 +47,11 @@ var optimist = require('optimist')
   , 'default': ''
   , describe: 'Include raw slices(for Web Audio API) in specified formats.'
   })
+  .options('mapabspath', {
+    alias: 'm'
+   , 'default': false
+   , describe: 'Preserve absolute file names in sprite map json.'
+  })
   .options('help', {
     alias: 'h'
   , describe: 'Show this help message.'
@@ -272,7 +277,14 @@ function processFiles() {
         cb()
       }
 
-      var name = path.basename(file).replace(/\.[a-zA-Z0-9]+$/, '')
+     if ( argv.mapabspath ) {
+      var name = path.dirname(file) + path.basename(file)
+	}
+     else {
+	var name = path.basename(file).replace(/\.[a-zA-Z0-9]+$/, '')
+	}
+
+
       appendFile(name, tmp, tempFile, function(err) {
         if (rawparts != null ? rawparts.length : void 0) {
         async.forEachSeries(rawparts, function(ext, cb) {
