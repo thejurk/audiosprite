@@ -278,7 +278,7 @@ function processFiles() {
       }
 
      if ( argv.mapabspath ) {
-      var name = path.dirname(file) + path.basename(file)
+      var name = path.dirname(file) + "/" +  path.basename(file)
 	}
      else {
 	var name = path.basename(file).replace(/\.[a-zA-Z0-9]+$/, '')
